@@ -9,46 +9,46 @@ let msgs = []
 let users = []
 
 io.on('connection', socket => {
-	let id
+  let id
 
-	let sendUsers = () => {
-		socket.emit('users', users)
-		socket.broadcast.emit('users', users)
-	}
-	let sendMsgs = () => {
-		socket.emit('msgs', msgs)
-		socket.broadcast.emit('msgs', msgs)
-	}
+  let sendUsers = () => {
+    socket.emit('users', users)
+    socket.broadcast.emit('users', users)
+  }
+  let sendMsgs = () => {
+    socket.emit('msgs', msgs)
+    socket.broadcast.emit('msgs', msgs)
+  }
 
-	socket.on('msg', data => {
-		msgs.push(data)
-		socket.broadcast.emit('msg', data)
-	})
+  socket.on('msg', data => {
+    msgs.push(data)
+    socket.broadcast.emit('msg', data)
+  })
 
-	socket.on('msgs:update', data => {
-		msgs = data
-	})	
+  socket.on('msgs:update', data => {
+    msgs = data
+  })	
 
-	socket.on('user:connect', data => {
-		id = data.id
-		let user = users.find(user => data.id == user.id)
-		if (user) user.online = true
-		else {
-				users.push({...data, online: true})	
-		}
-	})
+  socket.on('user:connect', data => {
+    id = data.id
+    let user = users.find(user => data.id == user.id)
+    if (user) user.online = true
+    else {
+      users.push({...data, online: true})	
+    }
+  })
 
-	socket.on('users:get', data => {
-		sendUsers()
-	})
-	socket.on('msgs:get', data => {
-		sendMsgs()
-	})
+  socket.on('users:get', data => {
+    sendUsers()
+  })
+  socket.on('msgs:get', data => {
+    sendMsgs()
+  })
 
-	socket.on('disconnect', () => {
-		users.find(user => user.id == id).online = false
-		sendUsers()
-	})
+  socket.on('disconnect', () => {
+    users.find(user => user.id == id).online = false
+    sendUsers()
+  })
 })
 
 const port = process.env.PORT || 3000

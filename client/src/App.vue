@@ -16,13 +16,14 @@ export default {
     MyChat: () => import('@/components/MyChat.vue')
   },
   data: () => ({
+    domain: 'http://localhost:3000',
     socket: null,
     users: [],
     msgs: [],
     uid: null
   }),
   created() {
-    this.socket = io(window.location.href)
+    this.socket = io(this.domain)
   },
   mounted() {
     let user = window.localStorage.getItem('user')

@@ -16,20 +16,20 @@
 </template>
 <script>
 export default {
-	name: 'MyNav',
-	props: ['users'],
-	data: () => ({
-		isNav: false,
-		inputFind: '',
-	}),
-	computed: {
-		usersSearch() {
+  name: 'MyNav',
+  props: ['users'],
+  data: () => ({
+    isNav: false,
+    inputFind: '',
+  }),
+  computed: {
+    usersSearch() {
       return this.inputFind ? this.users.filter(user => user.id.indexOf(this.inputFind, 0) != -1) : this.users
     },
     countOnline() {
       return this.users.filter(user => user.online).length
     }
-	}
+  }
 }
 </script>
 <style lang="scss">

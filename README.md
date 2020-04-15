@@ -23,20 +23,21 @@ sudo npm i
 
 ### 3. Запуск.
 
-# В режиме разработки:
-в первом терминале
+#### В режиме разработки:
+
+В первом терминале:
 ```
 cd client
 npm run serve
 ```
-во втором терминале
+Во втором терминале:
 ```
 cd server
 npm start
 ```
 открывать http://localhost:8080
 
-# Построить проект:
+#### Построить проект:
 ```
 cd client
 sudo npm run build
@@ -47,14 +48,14 @@ npm start
 
 ### 4. Скринкаст. 
 
-# Структура чата
-![](https://media.giphy.com/media/SvWKnc6cG57SEiwDrB/giphy.gif)
+#### Структура чата
+![](https://i.yapx.ru/HEoeJ.gif)
 
-# Работа чата
-![](https://media.giphy.com/media/SUuo53vgNCxgtv8lH5/giphy.gif)
+#### Работа чата
+![](https://i.yapx.ru/HEogH.gif)
 
-# Удаление сообщениий
-![](https://media.giphy.com/media/jUd03WehUwjgw9UwYR/giphy.gif)
+#### Удаление сообщениий
+![](https://i.yapx.ru/HEoj1.gif)
 
-# Поиск пользователей
-![](https://media.giphy.com/media/lrgvCX0OdK6G1aIV4e/giphy.gif)
+#### Поиск пользователей
+![](https://i.yapx.ru/HEo6v.gif)

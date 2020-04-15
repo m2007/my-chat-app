@@ -49,13 +49,13 @@ npm start
 ### 4. Скринкаст. 
 
 #### Структура чата
-![](https://i.yapx.ru/HEoeJ.gif)
+![Структура чата](https://github.com/m2007/my-chat-app/raw/gifs/1.png)
 
 #### Работа чата
-![](https://i.yapx.ru/HEogH.gif)
+![Работа чата](https://github.com/m2007/my-chat-app/raw/gifs/2.png)
 
 #### Удаление сообщениий
-![](https://i.yapx.ru/HEoj1.gif)
+![Удаление сообщениий](https://github.com/m2007/my-chat-app/raw/gifs/3.png)
 
 #### Поиск пользователей
-![](https://i.yapx.ru/HEo6v.gif)
+![Поиск пользователей](https://github.com/m2007/my-chat-app/raw/gifs/4.png)
